@@ -1,0 +1,5 @@
+1. For Assignment Change, Assignment Name is not showing for some of the Employees
+2. For Person ExternalI dentifiers, We can Add up to 2 Identifiers only
+3. Add Secendory Worker Relationship
+4. Fields Location change, Job Change, Location Change, pramotion -> Position chage input fields ned to check
+5. In Absence Management, Based ON THe absence type, the fields below are getting changed.
