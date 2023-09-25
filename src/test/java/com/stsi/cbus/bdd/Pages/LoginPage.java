@@ -18,8 +18,23 @@ public class LoginPage  {
 
     public String xpath = "//span[text()='%s']";
 
+
     @FindBy(xpath = "//input[@name='username']")
-    public WebElement userName;
+    public WebElement userNameInputField;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordInputField;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//h6[text()='Dashboard']")
+    public WebElement dashboardIcon;
+
+
+
+
+
 
 
 

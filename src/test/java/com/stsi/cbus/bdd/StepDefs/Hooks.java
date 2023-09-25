@@ -11,7 +11,7 @@ public class Hooks extends BasePageSetup {
     @Before
     public void launchBrowser() throws Exception {
         initialization("Chrome");
-        webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+//        webdriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
     @After

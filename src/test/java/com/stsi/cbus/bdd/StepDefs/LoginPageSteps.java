@@ -14,7 +14,6 @@ import com.stsi.cbus.bdd.StepsImp.LoginPageStepsImp;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.util.Map;
 
 public class LoginPageSteps extends BasePageSetup {
 
@@ -26,11 +25,36 @@ public class LoginPageSteps extends BasePageSetup {
    }
 
 
-
     @Given("I Navigate to Orange HRM URL")
-    public void I_Navigate_to_Orange_HRM_URL() throws Exception {
-        webdriver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    public void i_navigate_to_orange_hrm_url() {
+
+       webdriver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+
     }
+    @Then("I Validate Login page is Disaplyed")
+    public void i_validate_login_page_is_disaplyed() throws InterruptedException {
+
+        loginPageStepsImp.validateLoginPageIsDisplayed();
+
+    }
+    @When("I Enter Valid User Name and Valid Password")
+    public void i_enter_valid_user_name_and_valid_password() {
+
+        loginPageStepsImp.enterValidUserNameAndValidPassword();
+    }
+    @When("I Click On Login Button")
+    public void i_click_on_login_button() {
+
+       loginPageStepsImp.clickOnLoginButton();
+
+    }
+    @Then("I Validate Application Logged In Successfully")
+    public void i_validate_application_logged_in_successfully() throws InterruptedException {
+
+        loginPageStepsImp.validateDahsboardIconIsDisplayed();
+    }
+
+
 
 
 

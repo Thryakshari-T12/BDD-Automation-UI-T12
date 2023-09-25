@@ -20,10 +20,9 @@ public class BasePageSetup extends PageInitializer {
 
         if (browser.equalsIgnoreCase("Chrome")) {
 
-
             WebDriverManager.chromedriver().setup();
-           WebDriver driver = new ChromeDriver();
-
+            webdriver = new ChromeDriver();
+            webdriver.manage().window().maximize();
 
 
 

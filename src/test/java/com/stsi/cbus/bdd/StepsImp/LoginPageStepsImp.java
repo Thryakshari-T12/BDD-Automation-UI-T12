@@ -17,4 +17,28 @@ public class LoginPageStepsImp extends BasePageSetup {
     }
 
 
+
+    public void validateLoginPageIsDisplayed() throws InterruptedException {
+
+        Thread.sleep(5000);
+        Assert.assertTrue(loginPage.userNameInputField.isDisplayed());
+
+    }
+
+    public void enterValidUserNameAndValidPassword(){
+
+        loginPage.userNameInputField.sendKeys("Admin");
+        loginPage.passwordInputField.sendKeys("admin123");
+    }
+
+
+    public void clickOnLoginButton(){
+
+        loginPage.loginButton.click();
+    }
+
+    public void validateDahsboardIconIsDisplayed() throws InterruptedException {
+        Thread.sleep(3000);
+       Assert.assertTrue(loginPage.dashboardIcon.isDisplayed());
+    }
 }
