@@ -31,6 +31,10 @@ public class LoginPage  {
     @FindBy(xpath = "//h6[text()='Dashboard']")
     public WebElement dashboardIcon;
 
+    @FindBy(xpath = "//p[text()='Invalid credentials']")
+    public WebElement invalidCrediantialsMsg;
+
+
 
 
 

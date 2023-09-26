@@ -31,6 +31,7 @@ public class LoginPageSteps extends BasePageSetup {
        webdriver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
     }
+
     @Then("I Validate Login page is Disaplyed")
     public void i_validate_login_page_is_disaplyed() throws InterruptedException {
 
@@ -54,9 +55,18 @@ public class LoginPageSteps extends BasePageSetup {
         loginPageStepsImp.validateDahsboardIconIsDisplayed();
     }
 
+    @Then("^I Enter InValid UserName (.*) and InValid Password (.*)$")
+    public void i_Enter_InValid_UserName_and_InValid_Password(String userName, String password) throws InterruptedException {
 
+       loginPageStepsImp.enterInvalidUserNameAndInvalidPassword(userName,password);
+    }
 
+    @Then("I Validate Application Not Logged In Successfully")
+    public void  i_Validate_Application_Not_Logged_In_Successfully() throws InterruptedException {
 
+        loginPageStepsImp.validateApplicationNotLoggedInSuccessfully();
+
+    }
 
 
 }

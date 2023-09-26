@@ -7,3 +7,19 @@ Feature: Login Page Scenarios
     When  I Enter Valid User Name and Valid Password
     And   I Click On Login Button
     Then  I Validate Application Logged In Successfully
+
+
+    @invalidLogin
+    Scenario Outline:  Validate Application With In Valid Credentials
+      Given I Navigate to Orange HRM URL
+      Then  I Validate Login page is Disaplyed
+      When  I Enter InValid UserName <userName> and InValid Password <password>
+      And   I Click On Login Button
+      Then  I Validate Application Not Logged In Successfully
+      Examples:
+          |     userName    |        password      |
+          |     Admin       |        admin12345    |
+          |     Test        |        admin123      |
+          |     Test        |        admin12345    |
+
+
