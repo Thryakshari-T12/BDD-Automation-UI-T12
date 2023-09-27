@@ -9,3 +9,4 @@ Scenario: Validate all the Menu links are displayed
   Then  I Validate Application Logged In Successfully
   Then  I Validate all the Menu Links are Displayed
   | Admin | PIM | Leave | Time |
+
