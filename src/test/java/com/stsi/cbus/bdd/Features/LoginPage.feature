@@ -23,3 +23,11 @@ Feature: Login Page Scenarios
           |     Test        |        admin12345    |
 
 
+
+  @validlogin
+  Scenario: Validate Application With Valid Credentials
+    Given I Navigate to Orange HRM URL
+    Then  I Validate Login page is Disaplyed
+    When  I Enter Valid User Name "Admin" and Valid Password "admin123"
+    And   I Click On Login Button
+    Then  I Validate Application Logged In Successfully

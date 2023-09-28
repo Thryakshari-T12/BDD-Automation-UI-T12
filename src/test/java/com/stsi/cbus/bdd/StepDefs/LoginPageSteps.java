@@ -69,4 +69,12 @@ public class LoginPageSteps extends BasePageSetup {
     }
 
 
+    @Then("I Enter Valid User Name {string} and Valid Password {string}")
+    public void  i_Enter_Valid_User_Name_and_Valid_Password(String userName, String password) throws InterruptedException {
+
+            loginPageStepsImp.enterValidUserNameAndPassword(userName,password);
+
+    }
+
+
 }

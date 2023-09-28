@@ -55,4 +55,11 @@ public class LoginPageStepsImp extends BasePageSetup {
         Assert.assertTrue(loginPage.invalidCrediantialsMsg.isDisplayed());
     }
 
+    public void enterValidUserNameAndPassword(String userName, String password) throws InterruptedException {
+
+        Thread.sleep(3000);
+       loginPage.userNameInputField.sendKeys(userName);
+       loginPage.passwordInputField.sendKeys(password);
+    }
+
 }
